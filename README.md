@@ -1,98 +1,161 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+````markdown
+# NestJS Full Project – REST API with Authentication and MySQL
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+This is a backend application built using **NestJS**. It demonstrates how to build scalable and maintainable server-side applications with core features like modules, controllers, services, authentication, and MySQL integration.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+The project is inspired by the YouTube course: [NestJS Tutorial - Full Course for Beginners](https://www.youtube.com/watch?v=Mgr5_r70OJQ)
 
-## Description
+---
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 📚 Summary
 
-## Project setup
+This project guides you through building a REST API with:
+
+- Full CRUD operations using TypeORM
+- JWT-based authentication
+- Class validation using decorators
+- Protected routes with PassportJS
+- Environment-based configuration
+- Request payload validation and stripping unwanted data
+- Modular structure (User, Auth, Profile modules)
+
+
+## 🔧 Installation
+
+### 1. Clone the Repository
 
 ```bash
-$ npm install
-```
+git clone https://github.com/AyruSai/Nest-JS-My-App.git
+cd <project-directory>
+````
 
-## Compile and run the project
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Run tests
+### 2. Install Dependencies
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+npm install
 ```
 
-## Deployment
+### 3. Set Up Environment Variables
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+Create a `.env` file in the root directory:
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+```env
+DB_HOST=localhost
+DB_PORT=3306
+DB_USERNAME=root
+DB_PASSWORD=yourpassword
+DB_NAME=nestdb
+JWT_SECRET=secretKey
+```
+
+---
+
+## ▶️ Running the Application
 
 ```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+# Run in development mode
+npm run start:dev
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+Visit: [http://localhost:3000](http://localhost:3000)
 
-## Resources
+---
 
-Check out a few resources that may come in handy when working with NestJS:
+## 📫 API Endpoints
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+### 📁 User
 
-## Support
+| Method | Endpoint    | Description       |
+| ------ | ----------- | ----------------- |
+| GET    | `/user`     | Get all users     |
+| GET    | `/user/:id` | Get user by ID    |
+| POST   | `/user`     | Create new user   |
+| PATCH  | `/user/:id` | Update user by ID |
+| DELETE | `/user/:id` | Delete user by ID |
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+* Validation: Accepts only `name` (string), `email` (valid email), and `password` (string)
+* Strips unwanted properties using class-validator + whitelist
 
-## Stay in touch
+Example `CreateUserDto`:
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+```ts
+import { IsEmail, IsString } from 'class-validator';
 
-## License
+export class CreateUserDto {
+  @IsString()
+  name: string;
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+  @IsEmail()
+  email: string;
+
+  @IsString()
+  password: string;
+}
+```
+
+---
+
+### 🔐 Authentication
+
+| Method | Endpoint      | Description   |
+| ------ | ------------- | ------------- |
+| POST   | `/auth/login` | Get JWT Token |
+
+* Requires valid credentials from `/user`
+* Returns JWT token with `Bearer` prefix
+
+---
+
+### 🔒 Protected Routes
+
+| Method | Endpoint   | Description            |
+| ------ | ---------- | ---------------------- |
+| GET    | `/profile` | Get user profile (JWT) |
+
+* Requires Bearer token in header:
+  `Authorization: Bearer <JWT_TOKEN>`
+
+---
+
+## 🧪 Testing
+
+NestJS comes with built-in testing tools.
+
+```bash
+# Run unit tests
+npm run test
+
+# Run e2e tests
+npm run test:e2e
+```
+
+---
+
+## 📁 Project Structure (Top Level)
+
+```
+src/
+├── app.controller.ts
+├── app.module.ts
+├── auth/
+├── profile/
+├── user/
+├── main.ts
+```
+
+---
+
+## 🛠️ Technologies Used
+
+* NestJS
+* TypeORM
+* MySQL
+* Passport JWT
+* Class Validator
+* dotenv
+
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
