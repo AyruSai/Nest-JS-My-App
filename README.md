@@ -1,9 +1,12 @@
 ````markdown
 # NestJS Full Project – REST API with Authentication and MySQL
 
-This is a backend application built using **NestJS**. It demonstrates how to build scalable and maintainable server-side applications with core features like modules, controllers, services, authentication, and MySQL integration.
+This is a backend application built using **NestJS**.
+It demonstrates how to build scalable and maintainable server-side applications
+with core features like modules, controllers, services, authentication, and MySQL integration.
 
-The project is inspired by the YouTube course: [NestJS Tutorial - Full Course for Beginners](https://www.youtube.com/watch?v=Mgr5_r70OJQ)
+The project is inspired by the YouTube course:
+[NestJS Tutorial - Full Course for Beginners](https://www.youtube.com/watch?v=Mgr5_r70OJQ)
 
 ---
 
