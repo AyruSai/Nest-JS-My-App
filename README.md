@@ -140,10 +140,28 @@ npm run test:e2e
 src/
 ├── app.controller.ts
 ├── app.module.ts
-├── auth/
-├── profile/
-├── user/
+├── auth
+│   ├── auth.constant.ts
+│   ├── auth.controller.spec.ts
+│   ├── auth.controller.ts
+│   ├── auth.module.ts
+│   ├── auth.service.spec.ts
+│   ├── auth.service.ts
+│   ├── jwt.strategy.ts
+│   └── local.strategy.ts
 ├── main.ts
+├── profile
+│   ├── profile.controller.spec.ts
+│   ├── profile.controller.ts
+│   └── profile.module.ts
+└── user
+    ├── dto
+    ├── entity
+    ├── user.controller.spec.ts
+    ├── user.controller.ts
+    ├── user.module.ts
+    ├── user.service.spec.ts
+    └── user.service.ts
 ```
 
 ---
